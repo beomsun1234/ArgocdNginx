@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: 버전 정보 추출
-      run: echo "TAG=$(echo '${{ github.event.head_commit.message }}' | sed 's/[^0-9]\+[^0-9]//g')"
+      run: echo "TAG=$(echo '${{ github.event.head_commit.message }}' | sed 's/[^0-9]\+[^0-9]//g')" >> $GITHUB_ENV
       id: extract_version_name       
     - name: Release 생성 
       uses: actions/create-release@v1
