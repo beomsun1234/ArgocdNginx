@@ -4,6 +4,7 @@ on:
     # Sequence of patterns matched against refs/tags
     paths-ignore:
       - "README.md"
+      - ".github/workflows/**"
     branches:
       - main
     
