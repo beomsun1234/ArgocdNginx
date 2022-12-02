@@ -2,9 +2,11 @@ name: Create Release & Tag
 on:
   push:
     # Sequence of patterns matched against refs/tags
+    paths-ignore:
+      - "README.md"
     branches:
       - main
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
